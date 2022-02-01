@@ -118,7 +118,7 @@ price: Big; // price offered
 
 ## OfferLogic
 
-A [reactive offer](../../data-structures/market.md) is managed by a smart contract which implements its[ logic](api-classes-overview.md#offerlogic). One may use the API to post liquidity on Mangrove via a deployed logic that complies to the [IOfferLogic](https://github.com/mangrovedao/mangrove/blob/master/packages/mangrove-solidity/contracts/Strategies/interfaces/IOfferLogic.sol) interface. To do so, one first need an `OfferLogic` instance:
+A [reactive offer](https://docs.mangrove.exchange/data-structures/market) is managed by a smart contract which implements its [logic](api-classes-overview.md#offerlogic). One may use the API to post liquidity on Mangrove via a deployed logic that complies to the [IOfferLogic](https://github.com/mangrovedao/mangrove/blob/master/packages/mangrove-solidity/contracts/Strategies/interfaces/IOfferLogic.sol) interface. To do so, one first need an `OfferLogic` instance:
 
 ```typescript
 const mgvLogic = mgv.offerLogic("0x..."); // NB not an async call
@@ -142,7 +142,7 @@ When using an offer logic that inherits from the  [`MultiUser.sol`](https://gith
 
 ## LiquidityProvider
 
-A `LiquidityProvider` instance is the object one needs to [post Bids and Asks](posting-bids-and-asks.md) on a Mangrove market. There are two means to obtain an LiquidityProvider: either to post a [direct Offer](../../offer-making-strategies/basic-offer.md) or to post an Offer relying on some onchain [logic](api-classes-overview.md#offerlogic).
+A `LiquidityProvider` instance is the object one needs to [post Bids and Asks](posting-bids-and-asks.md) on a Mangrove market. There are two means to obtain an LiquidityProvider: either to post a [direct Offer](https://docs.mangrove.exchange/offer-making-strategies/basic-offer) or to post an Offer relying on some onchain [logic](api-classes-overview.md#offerlogic).
 
 To act as a direct liquidity provider on a some [`mgvMarket`](api-classes-overview.md#market) you must obtain a `LiquidityProvider` instance from an [`mgv`](api-classes-overview.md#mangrove) object using:
 
